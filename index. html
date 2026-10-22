@@ -1,0 +1,1347 @@
+```html
+    <title>แผ่นดินนี้ เมล็ดพันธุ์นี้ ใครครอง? (Seed Sovereign: วิกฤต UPOV 1991)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Prompt & Sarabun & Charm -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Prompt:wght@300;400;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Prompt', 'Sarabun', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .thai-poem {
+            font-family: 'Charm', cursive, 'Sarabun', serif;
+        }
+        .thai-serif {
+            font-family: 'Sarabun', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        /* Glassmorphism elements */
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Epic Glow Effect */
+        @keyframes epicPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(234, 179, 8, 0.2), inset 0 0 15px rgba(234, 179, 8, 0.1); }
+            50% { box-shadow: 0 0 50px rgba(239, 68, 68, 0.4), inset 0 0 25px rgba(239, 68, 68, 0.2); }
+        }
+        .cover-border-glow {
+            animation: epicPulse 4s infinite ease-in-out;
+        }
+        .progress-bar-fill {
+            transition: width 0.5s ease-in-out, background-color 0.5s ease;
+        }
+        .crop-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+        }
+        @media (max-width: 640px) {
+            .crop-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950 relative">
+
+    <!-- LANDING / COVER SCREEN OVERLAY -->
+    <div id="cover-screen" class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 overflow-y-auto">
+        <div class="max-w-3xl w-full my-auto glass-panel p-6 md:p-10 rounded-3xl border border-amber-500/40 shadow-2xl relative overflow-hidden cover-border-glow text-center">
+            
+            <!-- Background Decorative Art -->
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Top Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-950/80 border border-amber-500/40 rounded-full text-amber-300 text-xs font-semibold uppercase tracking-widest mb-4">
+                <i data-lucide="sprout" class="w-4 h-4 text-amber-400"></i>
+                <span>เกมจำลองสถานการณ์และต่อสู้ทางนโยบาย</span>
+            </div>
+
+            <!-- Main Title & Subtitle -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 tracking-tight leading-tight mb-2">
+                แผ่นดินนี้ เมล็ดพันธุ์นี้<br/><span class="text-rose-500">ใครครอง?</span>
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-400 font-medium mb-6">
+                Seed Sovereign: วิกฤต UPOV 1991 & การผูกขาดวัตถุดิบอาหาร
+            </p>
+
+            <!-- Poetic Poem Box -->
+            <div class="bg-slate-900/90 border border-amber-500/30 p-5 sm:p-6 rounded-2xl shadow-inner mb-6 text-amber-200/90 thai-poem text-xl sm:text-2xl md:text-3xl leading-relaxed">
+                “แผ่นดินนี้ เมล็ดพันธุ์นี้ ใครครอง?<br/>
+                ผืนดินพืชพรรณพ้อง ผูกไว้<br/>
+                สิทธิไถหว่านจะสูญสิ้น หรือสืบไป<br/>
+                อยู่ที่เราแลกไว้ ในมือนั้นเอง...”
+            </div>
+
+            <!-- Basil Case Study Teaser -->
+            <div class="bg-rose-950/30 border border-rose-500/30 p-3.5 sm:p-4 rounded-xl text-left text-xs text-slate-300 mb-6 flex items-start gap-3">
+                <div class="p-2 bg-rose-500/20 text-rose-400 rounded-lg shrink-0">
+                    <i data-lucide="flame" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-rose-300 uppercase tracking-wide block mb-0.5">กรณีศึกษาสดร้อน: สิทธิบัตรกะเพรา 4 สายพันธุ์</span>
+                    <p class="text-slate-400 thai-serif leading-relaxed">
+                        ทำความเข้าใจเมื่อนักวิจัยจดสิทธิบัตรกะเพราให้บรรษัททุนใหญ่ นำไปสู่ข้อกังวลเรื่องการผูกขาดห่วงโซ่อาหาร ตั้งแต่เมล็ดพันธุ์ กะเพราในจาน ไปจนถึงวิถีชีวิตเกษตรกรไทยภายใต้กรอบ UPOV 1991
+                    </p>
+                </div>
+            </div>
+
+            <!-- Credits & Start Button -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800 pt-5">
+                <div class="text-left text-xs text-slate-400">
+                    <span class="block font-semibold text-emerald-400">by a piece of peace, please</span>
+                    <span class="text-[11px] text-slate-500">รณรงค์เพื่ออธิปไตยทางอาหารและความหลากหลายทางชีวภาพ</span>
+                </div>
+                <button onclick="startGameFromCover()" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-amber-500 via-emerald-500 to-emerald-600 hover:from-amber-400 hover:to-emerald-400 text-slate-950 font-extrabold text-base rounded-xl shadow-lg shadow-amber-500/25 transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                    <span>เริ่มปกป้องอธิปไตยเมล็ดพันธุ์</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TOP HEADER / NAV BAR -->
+    <header class="glass-panel sticky top-0 z-40 border-b border-slate-700/50 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-amber-500/20 text-amber-400 rounded-lg border border-amber-500/30">
+                    <i data-lucide="sprout" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="font-bold text-base sm:text-lg leading-tight text-amber-400">แผ่นดินนี้ เมล็ดพันธุ์นี้ ใครครอง?</h1>
+                        <span class="text-[10px] px-2 py-0.5 bg-emerald-950 text-emerald-300 border border-emerald-500/30 rounded-full font-medium hidden sm:inline-block">by a piece of peace, please</span>
+                    </div>
+                    <p class="text-xs text-slate-400">วิกฤตเมล็ดพันธุ์ไทย & UPOV 1991</p>
+                </div>
+            </div>
+
+            <!-- Header Quick Stats & Controls -->
+            <div class="flex items-center space-x-2 sm:space-x-3 text-sm">
+                <div class="hidden md:flex items-center space-x-2 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                    <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+                    <span>ปีที่ <span id="year-display" class="font-bold text-amber-400">1</span> | ฤดูกาล: <span id="season-display" class="font-bold text-emerald-400">เพาะปลูก (ฤดูฝน)</span></span>
+                </div>
+                
+                <button id="btn-sound" onclick="toggleSound()" class="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-300 transition-colors" title="เปิด/ปิด เสียง">
+                    <i data-lucide="volume-2" id="sound-icon" class="w-5 h-5"></i>
+                </button>
+
+                <!-- Share & Launch for FB/IG Modal Trigger -->
+                <button onclick="openModal('share-modal')" class="flex items-center space-x-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg text-xs sm:text-sm font-semibold shadow-lg shadow-purple-900/30 transition-all">
+                    <i data-lucide="share-2" class="w-4 h-4"></i>
+                    <span>แชร์เกมลง FB / IG</span>
+                </button>
+
+                <button onclick="openModal('info-modal')" class="flex items-center space-x-1 px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-lg text-xs sm:text-sm font-medium transition-colors">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">คลังความรู้</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN GAME CONTAINER -->
+    <main class="max-w-7xl mx-auto w-full p-4 md:p-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- LEFT COLUMN: STATS & DASHBOARD (4 Cols) -->
+        <section class="lg:col-span-4 flex flex-col gap-5">
+            
+            <!-- STATS PANEL -->
+            <div class="glass-panel p-5 rounded-2xl border border-slate-700/80 shadow-xl space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-700/60 pb-3">
+                    <h2 class="font-bold text-slate-200 text-base flex items-center gap-2">
+                        <i data-lucide="activity" class="w-5 h-5 text-emerald-400"></i>
+                        ดัชนีสถานะชุมชน
+                    </h2>
+                    <span id="turn-badge" class="text-xs px-2.5 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full font-semibold">
+                        รอบที่ 1 / 12
+                    </span>
+                </div>
+
+                <!-- Stat 1: Biodiversity -->
+                <div class="space-y-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <i data-lucide="trees" class="w-4 h-4 text-emerald-400"></i> ความหลากหลายทางชีวภาพ
+                        </span>
+                        <span id="stat-bio-val" class="font-bold text-emerald-400">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                        <div id="stat-bio-bar" class="progress-bar-fill bg-emerald-500 h-full" style="width: 85%;"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-400">สะท้อนความสมบูรณ์พันธุ์พืชท้องถิ่น และความต้านทานโรค/ภูมิอากาศ</p>
+                </div>
+
+                <!-- Stat 2: Farmer Autonomy -->
+                <div class="space-y-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-blue-400"></i> อิสรภาพและอธิปไตยเกษตรกร
+                        </span>
+                        <span id="stat-auto-val" class="font-bold text-blue-400">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                        <div id="stat-auto-bar" class="progress-bar-fill bg-blue-500 h-full" style="width: 90%;"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-400">สิทธิในการเก็บ คัดสรร แลกเปลี่ยน และขยายพันธุ์เมล็ดพันธุ์เอง</p>
+                </div>
+
+                <!-- Stat 3: Money & Debt -->
+                <div class="space-y-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <i data-lucide="wallet" class="w-4 h-4 text-amber-400"></i> เงินทุน / หนี้สิน
+                        </span>
+                        <span id="stat-money-val" class="font-bold text-amber-400">฿ 50,000</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                        <div id="stat-money-bar" class="progress-bar-fill bg-amber-500 h-full" style="width: 60%;"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-400">ทุนหมุนเวียนเกษตรกร (หากติดลบจะเข้าสู่วิกฤตหนี้สิน)</p>
+                </div>
+
+                <!-- Stat 4: Public Resistance Power -->
+                <div class="space-y-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <i data-lucide="users" class="w-4 h-4 text-purple-400"></i> พลังตื่นรู้ & การต่อสู้ของภาคประชาชน
+                        </span>
+                        <span id="stat-power-val" class="font-bold text-purple-400">30%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                        <div id="stat-power-bar" class="progress-bar-fill bg-purple-500 h-full" style="width: 30%;"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-400">พลังการต่อต้านกฎหมายผูกขาดและการสร้างเครือข่ายภาคประชาชน</p>
+                </div>
+            </div>
+
+            <!-- FARM STATE VISUALIZER -->
+            <div class="glass-panel p-5 rounded-2xl border border-slate-700/80 shadow-xl space-y-3">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm text-slate-200 flex items-center gap-2">
+                        <i data-lucide="map" class="w-4 h-4 text-emerald-400"></i>
+                        สภาพแปลงเกษตรผืนดินชุมชน (12 แปลง)
+                    </h3>
+                    <span id="farm-status-label" class="text-xs font-semibold text-emerald-400">เกษตรผสมผสานพื้นบ้าน</span>
+                </div>
+
+                <!-- Visual Grid -->
+                <div id="crop-grid" class="crop-grid p-2 bg-slate-900/80 rounded-xl border border-slate-800">
+                    <!-- Dynamic Grid 12 tiles generated by JS -->
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+                    <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> พันธุ์พื้นบ้าน (อิสระ)</span>
+                    <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span> พันธุ์สิทธิบัตรบรรษัท (ผูกขาด)</span>
+                </div>
+            </div>
+
+            <!-- UPOV LEGAL THREAT ALERT BOX -->
+            <div id="upov-warning-card" class="glass-card p-4 rounded-xl border border-amber-500/30 bg-amber-950/20 hidden">
+                <div class="flex items-start gap-3">
+                    <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
+                    <div>
+                        <h4 class="font-bold text-xs text-amber-300 uppercase tracking-wider">แจ้งเตือนสถานการณ์แรงกดดัน</h4>
+                        <p id="upov-warning-text" class="text-xs text-slate-300 mt-1 leading-relaxed">
+                            ร่างกฎหมาย UPOV 1991 กำลังถูกผลักดันผ่านข้อตกลงการค้าเสรี (FTA)...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- RIGHT COLUMN: MAIN EVENT & DECISION INTERFACE (8 Cols) -->
+        <section class="lg:col-span-8 flex flex-col gap-5">
+
+            <!-- EVENT / SEASON CARD -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-700/80 shadow-2xl flex-1 flex flex-col justify-between relative overflow-hidden">
+                <!-- Decorative background blur -->
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div>
+                    <!-- Event Tag Header -->
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span id="event-tag" class="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs rounded-full font-semibold flex items-center gap-1.5">
+                            <i data-lucide="sun" class="w-3.5 h-3.5"></i> เหตุการณ์ประจำฤดูกาล
+                        </span>
+                        <span id="event-year-season" class="text-xs text-slate-400 font-medium">ปีที่ 1 - ฤดูเพาะปลูกแรก</span>
+                    </div>
+
+                    <!-- Event Title & Image/Icon Banner -->
+                    <div class="flex items-start gap-4 mb-4">
+                        <div id="event-icon-bg" class="p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20 text-emerald-400 shrink-0">
+                            <i data-lucide="wheat" id="event-icon" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h2 id="event-title" class="text-xl md:text-2xl font-bold text-slate-100 leading-snug">
+                                การเริ่มต้นฤดูกาลเพาะปลูก: ทางเลือกแห่งอนาคต
+                            </h2>
+                            <p id="event-subtitle" class="text-xs text-emerald-400 mt-1 font-medium">
+                                การตัดสินใจคัดเลือกเมล็ดพันธุ์ต้นฤดู
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event Detailed Narrative -->
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 mb-6">
+                        <p id="event-description" class="text-sm md:text-base text-slate-300 leading-relaxed thai-serif">
+                            ฤดูกาลใหม่เริ่มต้นขึ้น บรรษัทเกษตรยักษ์ใหญ่ AgriCorp ได้ส่งเซลส์แมนเข้ามาในหมู่บ้าน พร้อมเสนอขาย "ข้าวพันธุ์ผสมไฮบริดผลผลิตสูง" ที่อ้างว่าให้ผลผลิตเพิ่ม 2 เท่า ทนทานต่อศัตรูพืช แต่มีราคาแพงและ *ไม่อนุญาตให้เก็บเมล็ดไว้ทำพันธุ์ต่อในฤดูถัดไป* ตามเงื่อนไขสัญญา คุณและกลุ่มเกษตรกรในชุมชนจะตัดสินใจอย่างไร?
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CHOICES / ACTIONS CONTAINER -->
+                <div>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                        <i data-lucide="git-fork" class="w-4 h-4 text-amber-400"></i> เลือกการดำเนินการของคุณ:
+                    </h3>
+
+                    <div id="choices-container" class="grid grid-cols-1 gap-3">
+                        <!-- Dynamic Choices generated by JS -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ACTION LOG / HISTORY MINI PANEL -->
+            <div class="glass-card p-4 rounded-xl border border-slate-800">
+                <h4 class="text-xs font-bold text-slate-400 mb-2 flex items-center justify-between">
+                    <span class="flex items-center gap-1.5"><i data-lucide="history" class="w-3.5 h-3.5"></i> บันทึกเหตุการณ์และการต่อสู้</span>
+                    <span class="text-[10px] text-slate-500">บันทึกล่าสุด</span>
+                </h4>
+                <div id="action-log" class="text-xs text-slate-300 space-y-1.5 max-h-24 overflow-y-auto pr-1">
+                    <p class="text-slate-400 italic">เริ่มต้นการเดินทางคุ้มครองอธิปไตยเมล็ดพันธุ์ไทย...</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="glass-panel border-t border-slate-800 py-3 px-4 text-center text-xs text-slate-400 mt-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>Seed Sovereign: วิกฤตเมล็ดพันธุ์ไทย &copy; รณรงค์เพื่ออธิปไตยทางอาหารและความหลากหลายทางชีวภาพ</p>
+            <p class="text-emerald-400 font-medium">Developed <span class="text-slate-400">by a piece of peace, please</span></p>
+        </div>
+    </footer>
+
+
+    <!-- MODAL: SHARE & LAUNCH FOR FACEBOOK & INSTAGRAM -->
+    <div id="share-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel max-w-xl w-full max-h-[90vh] rounded-2xl border border-slate-700 shadow-2xl flex flex-col overflow-hidden">
+            <!-- Modal Header -->
+            <div class="p-5 border-b border-slate-700 flex justify-between items-center bg-slate-900/80">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg">
+                        <i data-lucide="share-2" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-100">แชร์เกมเพื่อสร้างความตื่นรู้ (FB & IG)</h3>
+                        <p class="text-xs text-purple-300">by a piece of peace, please — ชวนเพื่อนมาเรียนรู้ภัย UPOV 1991</p>
+                    </div>
+                </div>
+                <button onclick="closeModal('share-modal')" class="p-1.5 text-slate-400 hover:text-slate-200 rounded-lg hover:bg-slate-800">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 overflow-y-auto space-y-5 text-slate-300 text-sm leading-relaxed thai-serif">
+                
+                <!-- Quick Link & Copy Box -->
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-300 flex items-center gap-1.5">
+                        <i data-lucide="link" class="w-4 h-4 text-emerald-400"></i> ลิงก์สำหรับ Launch และแชร์เพื่อนๆ เล่น:
+                    </label>
+                    <div class="flex items-center gap-2">
+                        <input type="text" id="share-link-input" readonly value="" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-emerald-300 font-mono select-all">
+                        <button onclick="copyGameLink()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-lg shrink-0 transition-colors flex items-center gap-1.5">
+                            <i data-lucide="copy" class="w-4 h-4"></i> คัดลอกลิงก์
+                        </button>
+                    </div>
+                    <p id="copy-feedback" class="text-[11px] text-emerald-400 hidden">คัดลอกลิงก์สำเร็จ! นำไปวางในโพสต์ FB หรือ IG Bio ได้เลย</p>
+                </div>
+
+                <!-- QR Code Generator Canvas Container -->
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 flex flex-col sm:flex-row items-center gap-4">
+                    <div class="bg-white p-2 rounded-lg shrink-0 shadow-md">
+                        <canvas id="qr-canvas" width="110" height="110" class="block"></canvas>
+                    </div>
+                    <div class="space-y-1.5 text-center sm:text-left">
+                        <h4 class="font-bold text-slate-200 text-xs flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="qr-code" class="w-4 h-4 text-purple-400"></i> สแกน QR เพื่อเล่นบนมือถือทันที
+                        </h4>
+                        <p class="text-xs text-slate-400">
+                            เซฟภาพ QR Code นี้ไปแชร์ในสตอรี่ Instagram (IG Story) หรือโพสต์ Facebook เพื่อชวนผู้คนสแกนเข้ามาเรียนรู้เรื่องวิกฤตสิทธิเมล็ดพันธุ์
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Social Media Ready Captions -->
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-300 flex items-center gap-1.5">
+                        <i data-lucide="message-square" class="w-4 h-4 text-amber-400"></i> แคปชันพร้อมแชร์ (คัดลอกไปโพสต์ FB / IG):
+                    </label>
+                    <div class="relative">
+                        <textarea id="share-caption" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-xs text-slate-300 font-sans leading-relaxed resize-none focus:outline-none focus:border-purple-500">🌾 รู้หรือไม่? ร่างกฎหมาย UPOV 1991 กำลังทำให้การ "เก็บเมล็ดพันธุ์ไว้ปลูกต่อ" กลายเป็นความผิดทางอาญา!
+
+ชวนทุกคนมาลองเล่นเกมจำลองสถานการณ์ "Seed Sovereign: วิกฤตเมล็ดพันธุ์ไทย" เพื่อทำความเข้าใจภัยผูกขาดเมล็ดพันธุ์และผลกระทบต่อเกษตรกรรายย่อยด้วยกันครับ/ค่ะ 
+
+🎮 เล่นฟรีบนเว็บ & แชร์บอกต่อเพื่อปกป้องอธิปไตยทางอาหาร: 
+(คลิกลิงก์ในคอมเมนต์/Bio)
+
+#SeedSovereign #UPOV1991 #อธิปไตยเมล็ดพันธุ์ #ความหลากหลายทางชีวภาพ #APieceOfPeacePlease</textarea>
+                    </div>
+                    <button onclick="copyCaption()" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                        <i data-lucide="clipboard" class="w-4 h-4"></i> คัดลอกข้อความแคปชันทั้งหมด
+                    </button>
+                </div>
+
+                <!-- Launch Tips for FB & IG -->
+                <div class="bg-purple-950/20 border border-purple-500/30 p-3.5 rounded-xl space-y-1.5 text-xs text-slate-300">
+                    <h5 class="font-bold text-purple-300 flex items-center gap-1.5">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i> คำแนะนำการโปรโมทบนโซเชียลมีเดีย:
+                    </h5>
+                    <ul class="list-disc pl-4 space-y-1 text-slate-400">
+                        <li><strong>Facebook:</strong> โพสต์แชร์ลิงก์พร้อมรูปภาพหน้าจอเกม เพื่อชวนเพื่อนๆ เข้ามาคอมเมนต์และแชร์ต่อสาธารณะ</li>
+                        <li><strong>Instagram:</strong> ใส่ลิงก์เกมไว้ใน Link in Bio และแชร์ QR Code ลงใน IG Story พร้อมฟีเจอร์ Link Sticker</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-slate-700 bg-slate-900/80 flex justify-end">
+                <button onclick="closeModal('share-modal')" class="px-5 py-2 bg-purple-600 hover:bg-purple-500 text-white font-medium rounded-lg text-sm transition-colors">
+                    ปิดหน้าต่างนี้
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL 1: EDUCATIONAL GLOSSARY & UPOV 1991 FACT SHEET -->
+    <div id="info-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel max-w-3xl w-full max-h-[90vh] rounded-2xl border border-slate-700 shadow-2xl flex flex-col overflow-hidden">
+            <!-- Modal Header -->
+            <div class="p-5 border-b border-slate-700 flex justify-between items-center bg-slate-900/80">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-amber-500/20 text-amber-400 rounded-lg">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-100">คลังความรู้: เจาะลึกอันตราย UPOV 1991</h3>
+                        <p class="text-xs text-amber-400">by a piece of peace, please — ทำความเข้าใจการผูกขาดเมล็ดพันธุ์</p>
+                    </div>
+                </div>
+                <button onclick="closeModal('info-modal')" class="p-1.5 text-slate-400 hover:text-slate-200 rounded-lg hover:bg-slate-800">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="p-6 overflow-y-auto space-y-6 text-slate-300 text-sm leading-relaxed thai-serif">
+
+                <!-- Topic 1: What is UPOV 1991? -->
+                <section class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-bold text-base text-amber-300 mb-2 flex items-center gap-2">
+                        <i data-lucide="scale" class="w-5 h-5 text-amber-400"></i> UPOV 1991 คืออะไร?
+                    </h4>
+                    <p>
+                        <strong>UPOV (International Union for the Protection of New Varieties of Plants)</strong> ฉบับปี 1991 คืออนุสัญญาคุ้มครองพันธุ์พืชใหม่ระดับสากลที่ถูกออกแบบมาเพื่อคุ้มครองผลประโยชน์ของ <strong>บรรษัทปรับปรุงพันธุ์พืชข้ามชาติ</strong> โดยขยายขอบเขตสิทธิการผูกขาด และละเลยวิถีชีวิตของเกษตรกรรายย่อย
+                    </p>
+                </section>
+
+                <!-- Topic 2: Key Dangerous Points -->
+                <section class="space-y-4">
+                    <h4 class="font-bold text-base text-rose-400 flex items-center gap-2">
+                        <i data-lucide="alert-octagon" class="w-5 h-5 text-rose-500"></i> 4 พิษร้ายแรงของ UPOV 1991 ต่อเกษตรกรไทย
+                    </h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+                            <h5 class="font-bold text-rose-300 text-sm flex items-center gap-1.5">
+                                <i data-lucide="ban" class="w-4 h-4 text-rose-400"></i> 1. ห้ามเก็บเมล็ดพันธุ์ไปปลูกต่อ
+                            </h5>
+                            <p class="text-xs text-slate-400">
+                                ห้ามเกษตรกรเก็บเมล็ดพันธุ์พืชใหม่ที่ได้รับการคุ้มครองไว้ทำพันธุ์ต่อในฤดูถัดไป การเก็บ ทำซ้ำ หรือแลกเปลี่ยนเมล็ดพันธุ์จะกลายเป็น <strong>"ความผิดทางอาญา"</strong>
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+                            <h5 class="font-bold text-rose-300 text-sm flex items-center gap-1.5">
+                                <i data-lucide="file-warning" class="w-4 h-4 text-rose-400"></i> 2. หลักการ EDV (สายพันธุ์อนุพันธ์)
+                            </h5>
+                            <p class="text-xs text-slate-400">
+                                <strong>Essentially Derived Variety (EDV)</strong> หากเกษตรกรนำพืชสิทธิบัตรไปคัดสรรต่อจนได้พันธุ์ใหม่ บรรษัทเจ้าของพันธุ์เดิมยังคงมีสิทธิในพันธุ์ใหม่นั้นด้วย ยับยั้งการพัฒนาพันธุ์พืชของชาวบ้าน
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+                            <h5 class="font-bold text-rose-300 text-sm flex items-center gap-1.5">
+                                <i data-lucide="search-x" class="w-4 h-4 text-rose-400"></i> 3. ยึดผลผลิตและผลิตภัณฑ์แปรรูป
+                            </h5>
+                            <p class="text-xs text-slate-400">
+                                สิทธิคุ้มครองไม่จำกัดแค่เมล็ดพันธุ์ แต่ขยายไปถึง "ผลผลิต" และ "ผลิตภัณฑ์แปรรูป" หากตรวจพบว่าปลูกโดยไม่ได้รับอนุญาต บรรษัทมีสิทธิ์อายัดสินค้าทั้งหมด
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-900/80 p-3.5 rounded-lg border border-slate-800 space-y-1">
+                            <h5 class="font-bold text-rose-300 text-sm flex items-center gap-1.5">
+                                <i data-lucide="clock" class="w-4 h-4 text-rose-400"></i> 4. ขยายเวลาผูกบาดยาวนานขึ้น
+                            </h5>
+                            <p class="text-xs text-slate-400">
+                                ยืดระยะเวลาผูกขาดคุ้มครองพืชทั่วไปเป็น 20 ปี และพืชยืนต้น/ไม้ยืนต้นเป็น 25 ปี ตัดโอกาสการเข้าถึงพันธุ์พืชราคาถูกของสาธารณชน
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Topic 3: Comparison Thailand พ.ร.บ. 2542 vs UPOV 1991 -->
+                <section class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-bold text-base text-emerald-300 mb-3 flex items-center gap-2">
+                        <i data-lucide="git-compare" class="w-5 h-5 text-emerald-400"></i> เปรียบเทียบ: พ.ร.บ. คุ้มครองพันธุ์พืช 2542 ของไทย VS UPOV 1991
+                    </h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-700 text-slate-300 bg-slate-800/50">
+                                    <th class="p-2.5">ประเด็น</th>
+                                    <th class="p-2.5 text-emerald-400">พ.ร.บ. คุ้มครองพันธุ์พืช พ.ศ. 2542 (ไทย)</th>
+                                    <th class="p-2.5 text-rose-400">UPOV 1991 (อนุสัญญาสากล)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr>
+                                    <td class="p-2.5 font-semibold text-slate-300">สิทธิเก็บเมล็ดพันธุ์</td>
+                                    <td class="p-2.5 text-emerald-300">อนุญาตให้เกษตรกรเก็บปลูกต่อได้ตามวิถีชีวิต</td>
+                                    <td class="p-2.5 text-rose-300">ห้ามเก็บทำพันธุ์เด็ดขาด (ยกเว้นข้อยกเว้นแคบๆ ที่ต้องจ่ายค่าธรรมเนียม)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-semibold text-slate-300">ความคุ้มครองพืชพื้นเมือง</td>
+                                    <td class="p-2.5 text-emerald-300">มีกองทุนแบ่งปันผลประโยชน์กลับสู่ชุมชนท้องถิ่น</td>
+                                    <td class="p-2.5 text-rose-300">ไม่คุ้มครองพันธุ์พืชพื้นเมือง คุ้มครองเฉพาะพันธุ์ใหม่ของบรรษัท</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-semibold text-slate-300">การปลอมปนทางชีวภาพ</td>
+                                    <td class="p-2.5 text-emerald-300">ปกป้องเกษตรกรจากการถูกกลืนพันธุ์</td>
+                                    <td class="p-2.5 text-rose-300">การละอองเกสรปลอมปนอาจโดนฟ้องละเมิดสิทธิบัตร (EDV)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Topic 4: Solution -->
+                <section class="bg-emerald-950/30 border border-emerald-500/30 p-4 rounded-xl">
+                    <h4 class="font-bold text-base text-emerald-300 mb-2 flex items-center gap-2">
+                        <i data-lucide="shield" class="w-5 h-5 text-emerald-400"></i> ทางออกและความมั่นคงทางอาหาร
+                    </h4>
+                    <p class="text-xs text-slate-300">
+                        การปกป้องอธิปไตยทางเมล็ดพันธุ์ คือการสร้าง <strong>"ธนาคารเมล็ดพันธุ์ชุมชน" (Community Seed Bank)</strong> ส่งเสริมการเกษตรเชิงนิเวศ รักษาสายพันธุ์ท้องถิ่น และร่วมกันคัดค้านการลงนามข้อตกลง FTA ที่บังคับให้ไทยเข้าเป็นสมาชิก UPOV 1991 เพื่อให้ความมั่นคงทางอาหารยังคงอยู่ในมือของประชาชนทุกคน
+                    </p>
+                </section>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-slate-700 bg-slate-900/80 flex justify-between items-center">
+                <span class="text-[11px] text-slate-400">Project by a piece of peace, please</span>
+                <button onclick="closeModal('info-modal')" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg text-sm transition-colors">
+                    เข้าใจแล้ว กลับสู่เกม
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL 2: GAME OVER / ENDING SCREEN -->
+    <div id="ending-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel max-w-2xl w-full rounded-2xl border border-slate-700 shadow-2xl p-6 md:p-8 text-center space-y-6">
+            
+            <div id="ending-icon-container" class="w-20 h-20 mx-auto rounded-full flex items-center justify-center border">
+                <i data-lucide="award" id="ending-icon" class="w-10 h-10"></i>
+            </div>
+
+            <div>
+                <span id="ending-badge" class="px-3 py-1 text-xs rounded-full font-bold uppercase tracking-wider">
+                    บทสรุปฉากจบ
+                </span>
+                <h2 id="ending-title" class="text-2xl md:text-3xl font-bold text-slate-100 mt-2">
+                    ชื่อฉากจบ
+                </h2>
+                <p class="text-xs text-purple-300 mt-1">by a piece of peace, please</p>
+            </div>
+
+            <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800 text-slate-300 text-sm md:text-base leading-relaxed text-left thai-serif">
+                <p id="ending-description">
+                    คำอธิบายผลลัพธ์การต่อสู้และความเป็นไปของชุมชนเกษตรกร...
+                </p>
+            </div>
+
+            <!-- Final Stats Summary -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs border-y border-slate-800 py-4">
+                <div class="bg-slate-900/50 p-2.5 rounded-lg border border-slate-800">
+                    <span class="text-slate-400 block">ความหลากหลาย</span>
+                    <span id="end-stat-bio" class="font-bold text-emerald-400 text-sm">0%</span>
+                </div>
+                <div class="bg-slate-900/50 p-2.5 rounded-lg border border-slate-800">
+                    <span class="text-slate-400 block">อธิปไตยเกษตรกร</span>
+                    <span id="end-stat-auto" class="font-bold text-blue-400 text-sm">0%</span>
+                </div>
+                <div class="bg-slate-900/50 p-2.5 rounded-lg border border-slate-800">
+                    <span class="text-slate-400 block">สถานะเงินทุน</span>
+                    <span id="end-stat-money" class="font-bold text-amber-400 text-sm">฿0</span>
+                </div>
+                <div class="bg-slate-900/50 p-2.5 rounded-lg border border-slate-800">
+                    <span class="text-slate-400 block">พลังตื่นรู้ประชาชน</span>
+                    <span id="end-stat-power" class="font-bold text-purple-400 text-sm">0%</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <button onclick="restartGame()" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i> เริ่มเล่นใหม่อีกครั้ง
+                </button>
+                <button onclick="openModal('share-modal')" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="share-2" class="w-4 h-4"></i> แชร์ผลลัพธ์ลง FB/IG
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- GAME LOGIC & ENGINE SCRIPT -->
+    <script>
+        // Start game from cover screen
+        function startGameFromCover() {
+            playSfx('click');
+            const cover = document.getElementById('cover-screen');
+            cover.classList.add('transition-opacity', 'duration-500', 'opacity-0');
+            setTimeout(() => {
+                cover.classList.add('hidden');
+            }, 500);
+        }
+
+        // --- SOUND SYNTHESIZER (Web Audio API) ---
+        let audioCtx = null;
+        let soundEnabled = true;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playTone(freq, type, duration, vol = 0.1) {
+            if (!soundEnabled) return;
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = type;
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                console.log("Audio play error", e);
+            }
+        }
+
+        function playSfx(type) {
+            if (type === 'click') playTone(600, 'sine', 0.08, 0.05);
+            else if (type === 'plant') {
+                playTone(300, 'triangle', 0.1, 0.1);
+                setTimeout(() => playTone(450, 'triangle', 0.15, 0.08), 80);
+            }
+            else if (type === 'alert') {
+                playTone(220, 'sawtooth', 0.2, 0.12);
+                setTimeout(() => playTone(180, 'sawtooth', 0.3, 0.12), 150);
+            }
+            else if (type === 'coin') {
+                playTone(877, 'sine', 0.1, 0.08);
+                setTimeout(() => playTone(1200, 'sine', 0.2, 0.08), 90);
+            }
+            else if (type === 'victory') {
+                [440, 554, 659, 880].forEach((f, i) => {
+                    setTimeout(() => playTone(f, 'sine', 0.3, 0.1), i * 120);
+                });
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const icon = document.getElementById('sound-icon');
+            if (soundEnabled) {
+                icon.setAttribute('data-lucide', 'volume-2');
+                playSfx('click');
+            } else {
+                icon.setAttribute('data-lucide', 'volume-x');
+            }
+            lucide.createIcons();
+        }
+
+
+        // --- GAME STATE VARIABLES ---
+        let gameState = {
+            turn: 1,
+            maxTurns: 12,
+            biodiversity: 85, // 0 - 100%
+            autonomy: 90,     // 0 - 100%
+            money: 50000,     // THB
+            power: 30,        // Public Resistance Power %
+            heritageRatio: 0.85, // Ratio of heritage vs corporate crops
+            upovPassed: false, // Legal status
+            history: []
+        };
+
+        // --- GAME SCENARIOS / EVENT DATABASE ---
+        const scenarios = [
+            {
+                id: 1,
+                year: 1,
+                season: "ฤดูเพาะปลูกที่ 1",
+                title: "ทางแยกแรก: เมล็ดพันธุ์พื้นบ้าน หรือ ไฮบริดบรรษัท?",
+                subtitle: "การเลือกต้นพันธุ์สำหรับฤดูกาลใหม่",
+                icon: "sprout",
+                description: "บรรษัทเกษตรยักษ์ใหญ่ AgriCorp ได้ส่งตัวแทนเข้ามาเสนอขาย 'ข้าวไฮบริดดัดแปลง' โดยอ้างว่าให้ผลผลิตสูงขึ้น 50% แต่ติดสัญญาห้ามเก็บเมล็ดไว้ปลูกต่อเด็ดขาด ขณะที่กลุ่มเพื่อนเกษตรกรชวนกันใช้ 'ข้าวหอมหัวโทน' และ 'ข้าวเหนียวสันป่าตอง' พันธุ์พื้นบ้านที่เก็บรวบรวมไว้",
+                warning: null,
+                choices: [
+                    {
+                        title: "ใช้เมล็ดพันธุ์พื้นบ้าน & จัดตั้งคลังเมล็ดพันธุ์ชุมชน",
+                        desc: "ประหยัดค่าใช้จ่าย ปลูกแบบเกษตรผสมผสาน รักษาสายพันธุ์ดั้งเดิม",
+                        impact: { bio: +5, auto: +5, money: -2000, power: +10, heritageRatio: +0.1 },
+                        log: "คุณเลือกรักษาสายพันธุ์พื้นบ้าน จัดตั้งกองทุนเมล็ดพันธุ์ชุมชนเข้มแข็ง",
+                        sfx: "plant"
+                    },
+                    {
+                        title: "ซื้อเมล็ดพันธุ์ไฮบริด AgriCorp ทั้งหมด",
+                        desc: "หวังผลผลิตสูงในฤดูแรก ต้องซื้อปุ๋ยเคมีและยาฆ่าแมลงพ่วงตามสัญญา",
+                        impact: { bio: -15, auto: -15, money: -12000, power: -5, heritageRatio: -0.3 },
+                        log: "คุณยอมเซ็นสัญญาสังเคราะห์ ซื้อเมล็ดพันธุ์ไฮบริดราคาแพงของบรรษัท",
+                        sfx: "coin"
+                    },
+                    {
+                        title: "แบ่งพื้นที่ 50/50 ลองปลูกเปรียบเทียบ",
+                        desc: "ทดลองทั้งสองทางเพื่อดูผลผลิตและความคุ้มทุน",
+                        impact: { bio: -5, auto: -5, money: -6000, power: 0, heritageRatio: -0.1 },
+                        log: "คุณเลือกแบ่งพื้นที่ครึ่งหนึ่งลองปลูกพันธุ์ไฮบริดของบรรษัท",
+                        sfx: "click"
+                    }
+                ]
+            },
+            {
+                id: 2,
+                year: 1,
+                season: "ฤดูเก็บเกี่ยวที่ 1",
+                title: "ผลการเก็บเกี่ยว & แรงกดดันจากหนี้สิน",
+                subtitle: "ประเมินรายได้และสิทธิในการคัดพันธุ์พืช",
+                icon: "wheat",
+                description: "ฤดูเก็บเกี่ยวสิ้นสุดลง! ตลาดเริ่มผันผวน เกษตรกรที่ใช้พันธุ์บรรษัทเริ่มเจอราคาปุ๋ยเคมีปรับตัวสูงขึ้น และตามสัญญา AgriCorp ส่งเจ้าหน้าที่มาสุ่มตรวจฟาร์มว่ามีการเก็บเมล็ดพันธุ์ไว้หรือไม่",
+                warning: "มีรายงานว่ารัฐบาลเตรียมเจรจา FTA ฉบับใหม่ที่บรรจุเงื่อนไข UPOV 1991",
+                choices: [
+                    {
+                        title: "แอบเก็บเมล็ดพันธุ์ไฮบริดบางส่วนไว้ปลูกต่อ",
+                        desc: "เสี่ยงเสี่ยงต่อการถูกฟ้องร้อง หากถูกจับได้ภายใต้สัญญาบรรษัท",
+                        impact: { bio: 0, auto: -10, money: +15000, power: +5, heritageRatio: 0 },
+                        log: "คุณแอบเก็บเมล็ดพันธุ์ไว้ แต่ต้องอยู่อย่างหวาดระแวงการสุ่มตรวจ",
+                        sfx: "alert"
+                    },
+                    {
+                        title: "ขายผลผลิตพื้นบ้านอินทรีย์ผ่านตลาดตรงวิถีชุมชน",
+                        desc: "ได้ราคายุติธรรม คัดสรรเมล็ดพันธุ์ที่ดีที่สุดไว้สำหรับปีหน้า",
+                        impact: { bio: +5, auto: +5, money: +18000, power: +5, heritageRatio: +0.05 },
+                        log: "ขายผลผลิตเกษตรอินทรีย์ได้ราคาดี พร้อมคัดสายพันธุ์แข็งแกร่งไว้ต่อยอด",
+                        sfx: "coin"
+                    },
+                    {
+                        title: "ขายผลผลิตเข้าโรงสีใหญ่ของบรรษัท",
+                        desc: "ถูกกดราคาตามเกณฑ์ความชื้น แต่ได้เงินสดทันที",
+                        impact: { bio: -5, auto: -5, money: +12000, power: -5, heritageRatio: -0.05 },
+                        log: "ขายข้าวให้โรงสีบรรษัท โดนหักค่าความชื้น แต่ได้เงินมาหมุนเวียน",
+                        sfx: "coin"
+                    }
+                ]
+            },
+            {
+                id: 3,
+                year: 2,
+                season: "ฤดูเพาะปลูกที่ 2",
+                title: "วิกฤตแมลงศัตรูพืชระบาด & สภาพอากาศผันผวน",
+                subtitle: "พิสูจน์ความทนทานของสายพันธุ์พืช",
+                icon: "cloud-rain",
+                description: "เกิดภัยแล้งยาวนานตามด้วยเพลี้ยกระโดดสีน้ำตาลระบาดหนัก! พืชเชิงเดี่ยวพันธุ์ไฮบริดของบรรษัทที่ขาดความหลากหลายทางพันธุกรรมเกิดความเสียหายรุนแรง ขณะที่พืชพื้นบ้านหลากหลายชนิดแสดงความต้านทานตามธรรมชาติ",
+                warning: "วิกฤตศัตรูพืชทำให้บรรษัทเร่งโปรโมตปุ๋ยและสารเคมีสูตรพิเศษเพิ่มเติม",
+                choices: [
+                    {
+                        title: "ซื้อสารเคมีกำจัดศัตรูพืชราคาแพงของ AgriCorp",
+                        desc: "กู้เงินเพิ่มเพื่อซื้อเคมีมาฉีดพ่นฉุกเฉิน",
+                        impact: { bio: -15, auto: -10, money: -15000, power: -5, heritageRatio: -0.1 },
+                        log: "คุณต้องกู้หนี้มาซื้อสารเคมีเพิ่ม วงจรหนี้สินเริ่มพอกพูน",
+                        sfx: "alert"
+                    },
+                    {
+                        title: "ใช้น้ำหมักชีวภาพ & ใช้สมุนไพรพื้นบ้านรับมือ",
+                        desc: "พึ่งพาความรู้ภูมิปัญญาท้องถิ่น รักษาสภาพดินและระบบนิเวศ",
+                        impact: { bio: +10, auto: +10, money: -3000, power: +10, heritageRatio: +0.1 },
+                        log: "ใช้ภูมิปัญญาท้องถิ่นควบคุมแมลงสำเร็จ ฟื้นฟูระบบนิเวศในแปลง",
+                        sfx: "plant"
+                    }
+                ]
+            },
+            {
+                id: 4,
+                year: 2,
+                season: "จุดเปลี่ยนทางกฎหมาย",
+                title: "รัฐบาลประกาศพิจารณาผลักดัน UPOV 1991",
+                subtitle: "ภัยคุกคามสิทธิเกษตรกรครั้งใหญ่ที่สุด",
+                icon: "scale",
+                description: "ข่าวใหญ่ระดับประเทศ! รัฐบาลเตรียมลงนามข้อตกลงการค้าเสรี และเตรียมแก้ไข พ.ร.บ. คุ้มครองพันธุ์พืช โดยเปลี่ยนเข้าสู่ UPOV 1991 ซึ่งจะทำให้การเก็บเมล็ดพันธุ์ไปปลูกต่อกลายเป็นความผิดอาญา และเปิดทางให้บรรษัทผูกขาดสายพันธุ์พืช",
+                warning: "ภัยคุกคามระดับโครงสร้าง! หาก UPOV 1991 ผ่าน เกษตรกรอาจสูญเสียสิทธิทำกินตลอดกาล",
+                choices: [
+                    {
+                        title: "เข้าร่วมเครือข่าย 'พันธมิตรเซฟเมล็ดพันธุ์ไทย' ร่วมชุมนุมยื่นหนังสือ",
+                        desc: "ลงนาม รณรงค์ให้ความรู้ประชาชน และเข้าชี้แจงต่อสภา",
+                        impact: { bio: 0, auto: +10, money: -4000, power: +25, heritageRatio: 0 },
+                        log: "คุณกลายเป็นผู้นำเครือข่ายภาคประชาชน ร่วมคัดค้านกฎหมายผูกขาด",
+                        sfx: "plant"
+                    },
+                    {
+                        title: "นิ่งเฉย ปรับตัวตามกฎหมายใหม่เพื่อความปลอดภัย",
+                        desc: "เตรียมงบประมาณไว้ซื้อเมล็ดพันธุ์ลิขสิทธิ์อย่างถูกต้องในอนาคต",
+                        impact: { bio: -10, auto: -20, money: 0, power: -15, heritageRatio: -0.1 },
+                        log: "คุณเลือกรอโปรงและปรับตัวตามกฎหมายใหม่ ทำให้อำนาจเจรจาของชุมชนอ่อนแอลง",
+                        sfx: "click"
+                    }
+                ]
+            },
+            {
+                id: 5,
+                year: 3,
+                season: "ฤดูเพาะปลูกที่ 3",
+                title: "กับดักทางกฎหมาย: คดีละอองเกสรปลิวข้ามแปลง (EDV Trap)",
+                subtitle: "เมื่อสายพันธุ์บรรษัทปลอมปนเข้าแปลงพื้นบ้าน",
+                icon: "alert-triangle",
+                description: "แปลงนาข้างเคียงปลูกข้าวพืชสิทธิบัตรของ AgriCorp ละอองเกสรได้ปลิวข้ามมาผสมกับข้าวพื้นบ้านในแปลงของคุณ ทนายความของ AgriCorp นำเจ้าหน้าที่มาสุ่มตรวจ DNA พืช และส่งหนังสือโนติสขู่ฟ้องดำเนินคดีข้อหา 'ละเมิดสิทธิบัตรสายพันธุ์อนุพันธ์ (EDV)'!",
+                warning: "กลไก EDV ของ UPOV 1991 ถือว่าพืชที่ผสมสายพันธุ์สิทธิบัตรถือเป็นตกเป็นของบรรษัทด้วย!",
+                choices: [
+                    {
+                        title: "จ้างทนายสู้คดีในศาล & แถลงข่าวเปิดโปงความไม่เป็นธรรม",
+                        desc: "ใช้กรณีนี้สร้างกระแสสังคม ให้เห็นภัยร้ายของ UPOV 1991",
+                        impact: { bio: +5, auto: +15, money: -10000, power: +30, heritageRatio: +0.05 },
+                        log: "คุณเปิดหน้าสู้คดีในศาล สื่อมวลชนให้ความสนใจประเด็นเกสรปลอมปนอย่างกว้างขวาง",
+                        sfx: "alert"
+                    },
+                    {
+                        title: "ยอมความและจ่ายค่าปรับนอกศาลให้บรรษัท",
+                        desc: "จ่ายเงินชดเชยและยอมทำลายผลผลิตในแปลงเพื่อจบเรื่อง",
+                        impact: { bio: -15, auto: -25, money: -25000, power: -10, heritageRatio: -0.2 },
+                        log: "คุณยอมจ่ายค่าปรับมหาศาลเพื่อจบคดี สูญเสียทั้งเงินและพันธุ์พืชท้องถิ่น",
+                        sfx: "alert"
+                    }
+                ]
+            },
+            {
+                id: 6,
+                year: 3,
+                season: "ฤดูเก็บเกี่ยวที่ 3",
+                title: "งานมหกรรมแลกเปลี่ยนเมล็ดพันธุ์ไทย (Seed Festival)",
+                subtitle: "การฟื้นฟูอธิปไตยทางอาหารจากฐานราก",
+                icon: "sparkles",
+                description: "เครือข่ายเกษตรกรยั่งยืนจัดงานมหกรรมแลกเปลี่ยนเมล็ดพันธุ์พื้นบ้านระดับประเทศ เพื่อรวบรวมสายพันธุ์ข้าว พืชผัก สมุนไพรหายากกว่า 500 สายพันธุ์ เพื่อกระจายให้เกษตรกรนำไปขยายพันธุ์ต่อฟรี",
+                warning: null,
+                choices: [
+                    {
+                        title: "ขนเมล็ดพันธุ์มรดกชุมชนไปร่วมแจกจ่าย & เปิดเวทีเสวนา",
+                        desc: "สร้างความเข้มแข็งให้เครือข่ายเกษตรกรทั่วประเทศ",
+                        impact: { bio: +15, auto: +15, money: -2000, power: +20, heritageRatio: +0.15 },
+                        log: "กระจายเมล็ดพันธุ์มรดกไทยกว่า 50 ชนิด สู่มือเกษตรกรรุ่นใหม่ทั่วประเทศ",
+                        sfx: "plant"
+                    },
+                    {
+                        title: "เก็บเมล็ดพันธุ์ไว้ใช้เฉพาะในกลุ่มตนเอง ไม่ยุ่งเกี่ยวกับภายนอก",
+                        desc: "เพาะปลูกเงียบๆ เพื่อลดความเสี่ยงโดนตรวจสอบ",
+                        impact: { bio: 0, auto: -5, money: +5000, power: -5, heritageRatio: 0 },
+                        log: "เน้นการเพาะปลูกภายในกลุ่มเฉพาะ ทำให้เครือข่ายภายนอกขาดการสนับสนุน",
+                        sfx: "click"
+                    }
+                ]
+            },
+            {
+                id: 7,
+                year: 4,
+                season: "ฤดูเพาะปลูกที่ 4",
+                title: "สงครามสิทธิบัตร: การโจรกรรมชีวภาพ (Biopiracy)",
+                subtitle: "บรรษัทข้ามชาติยื่นจดสิทธิบัตร 'พริกการ์ด/พืชสมุนไพรไทย'",
+                icon: "shield-alert",
+                description: "พบว่าบรรษัทต่างชาติได้นำสายพันธุ์ 'พริกขี้หนูสวน' และ 'พริกเหรี่ยง' สายพันธุ์พื้นบ้านไทย ไปปรับปรุงพันธุกรรมเล็กน้อย แล้วยื่นจดสิทธิบัตรคุ้มครองพันธุ์พืชใหม่ภายใต้ระบบ UPOV ทำให้เกษตรกรไทยอาจถูกห้ามส่งออกผลิตภัณฑ์แปรรูปจากพริกดังกล่าว!",
+                warning: "UPOV 1991 ไม่คุ้มครองพันธุ์พืชพื้นเมืองดั้งเดิม เปิดช่องให้เกิดการโจรกรรมชีวภาพ!",
+                choices: [
+                    {
+                        title: "ยื่นคัดค้านสิทธิบัตร & นำหลักฐานเอกสารโบราณยื่นยันความเป็นเจ้าของชุมชน",
+                        desc: "เรียกร้องระบบคุ้มครองพันธุ์พืชพื้นเมืองตาม พ.ร.บ. 2542 ของไทย",
+                        impact: { bio: +10, auto: +10, money: -5000, power: +20, heritageRatio: +0.1 },
+                        log: "ยื่นเอกสารคัดค้านการจดสิทธิบัตรทับซ้อน ปกป้องพืชสมุนไพรไทยสำเร็จ",
+                        sfx: "alert"
+                    },
+                    {
+                        title: "เปลี่ยนไปปลูกพืชเศรษฐกิจอื่นเพื่อหลีกเลี่ยงปัญหา",
+                        desc: "ยกเลิกการปลูกพืชสมุนไพรพื้นบ้าน หันไปปลูกพืชไร่เชิงเดี่ยวส่งโรงงาน",
+                        impact: { bio: -20, auto: -15, money: +10000, power: -10, heritageRatio: -0.25 },
+                        log: "ละทิ้งพืชสมุนไพรท้องถิ่น ชุมชนสูญเสียความหลากหลายทางชีวภาพอย่างหนัก",
+                        sfx: "click"
+                    }
+                ]
+            },
+            {
+                id: 8,
+                year: 4,
+                season: "จุดตัดสินอนาคต (Final Stance)",
+                title: "การลงมติร่างกฎหมาย UPOV 1991 ในรัฐสภา",
+                subtitle: "นาทีสุดท้ายของการชี้ขาดอนาคตเกษตรกรรมไทย",
+                icon: "landmark",
+                description: "ร่างกฎหมาย UPOV 1991 กำลังจะถูกบรรจุเข้าสู่วาระการลงมติของรัฐสภา! แรงกดดันจากบรรษัทข้ามชาติรุนแรงมาก ขณะเดียวกันพลังประชาชนทั่วประเทศก็ตื่นตัวถึงขีดสุด คุณและเครือข่ายจะขับเคลื่อนอย่างไรในนาทีสุดท้าย?",
+                warning: "บทสรุปขึ้นอยู่กับพลังตื่นรู้ภาคประชาชน และระดับอธิปไตยทางอาหารที่คุณสะสมมา!",
+                choices: [
+                    {
+                        title: "ทุ่มเททรัพยากรทั้งหมด นำเครือข่ายระดมพลปิดล้อมสภา & ส่งข้อมูลให้สื่อทั่วโลก",
+                        desc: "ใช้พลังภาคประชาชนหยุดยั้งการลงมติกฎหมายผูกขาด",
+                        impact: { bio: +5, auto: +15, money: -10000, power: +35, heritageRatio: +0.1 },
+                        log: "สร้างประวัติศาสตร์การรวมพลังครั้งใหญ่ที่สุด หยุดยั้งการผูกขาดเมล็ดพันธุ์!",
+                        sfx: "victory"
+                    },
+                    {
+                        title: "เน้นการเจรจาล็อบบี้ขอข้อยกเว้นแคบๆ สำหรับเกษตรกรรายย่อย",
+                        desc: "ยอมรับกฎหมาย UPOV 1991 แต่ขอให้มีบทเฉพาะกาลผ่อนผันบางส่วน",
+                        impact: { bio: -10, auto: -20, money: -2000, power: -10, heritageRatio: -0.1 },
+                        log: "การเจรจาล็อบบี้ได้ผลเพียงเล็กน้อย บรรษัทบรรลุเป้าหมายการผูกขาดเกือบสมบูรณ์",
+                        sfx: "click"
+                    }
+                ]
+            }
+        ];
+
+
+        // --- ENGINE & LOGIC FUNCTIONS ---
+
+        function initGame() {
+            gameState = {
+                turn: 1,
+                maxTurns: scenarios.length,
+                biodiversity: 85,
+                autonomy: 90,
+                money: 50000,
+                power: 30,
+                heritageRatio: 0.85,
+                upovPassed: false,
+                history: []
+            };
+            
+            // Set current URL in share input
+            document.getElementById('share-link-input').value = window.location.href;
+            generateQRCode(window.location.href);
+
+            updateUI();
+            loadScenario(0);
+        }
+
+        function updateUI() {
+            // Update Top Header Stats
+            const currentScenario = scenarios[gameState.turn - 1] || scenarios[scenarios.length - 1];
+            document.getElementById('year-display').textContent = currentScenario.year;
+            document.getElementById('season-display').textContent = currentScenario.season;
+            document.getElementById('turn-badge').textContent = `รอบที่ ${gameState.turn} / ${gameState.maxTurns}`;
+
+            // Clamp Stats (0 - 100)
+            gameState.biodiversity = Math.min(100, Math.max(0, gameState.biodiversity));
+            gameState.autonomy = Math.min(100, Math.max(0, gameState.autonomy));
+            gameState.power = Math.min(100, Math.max(0, gameState.power));
+
+            // Update Numerical Text
+            document.getElementById('stat-bio-val').textContent = `${Math.round(gameState.biodiversity)}%`;
+            document.getElementById('stat-auto-val').textContent = `${Math.round(gameState.autonomy)}%`;
+            document.getElementById('stat-power-val').textContent = `${Math.round(gameState.power)}%`;
+            
+            // Format Money
+            const moneyFormatted = new Intl.NumberFormat('th-TH').format(gameState.money);
+            document.getElementById('stat-money-val').textContent = `฿ ${moneyFormatted}`;
+            if (gameState.money < 0) {
+                document.getElementById('stat-money-val').className = "font-bold text-rose-500 animate-pulse";
+            } else {
+                document.getElementById('stat-money-val').className = "font-bold text-amber-400";
+            }
+
+            // Update Progress Bars Width & Colors
+            setBar('stat-bio-bar', gameState.biodiversity, 'bg-emerald-500');
+            setBar('stat-auto-bar', gameState.autonomy, 'bg-blue-500');
+            setBar('stat-power-bar', gameState.power, 'bg-purple-500');
+            
+            // Money bar scale relative to 100k
+            const moneyPct = Math.min(100, Math.max(0, (gameState.money / 100000) * 100));
+            setBar('stat-money-bar', moneyPct, gameState.money < 0 ? 'bg-rose-600' : 'bg-amber-500');
+
+            // Render Farm Visual Tiles Grid
+            renderFarmGrid();
+        }
+
+        function setBar(id, val, colorClass) {
+            const el = document.getElementById(id);
+            el.style.width = `${val}%`;
+        }
+
+        // Render Farm Field Grid (12 tiles representing biodiversity & autonomy)
+        function renderFarmGrid() {
+            const grid = document.getElementById('crop-grid');
+            grid.innerHTML = '';
+
+            const totalTiles = 12;
+            const heritageCount = Math.round(gameState.heritageRatio * totalTiles);
+            
+            const cropIcons = ['sprout', 'wheat', 'flower2', 'leaf', 'tree-pine', 'apple'];
+            const corporateIcons = ['skull', 'test-tube', 'factory', 'ban'];
+
+            for (let i = 0; i < totalTiles; i++) {
+                const isHeritage = i < heritageCount;
+                const tile = document.createElement('div');
+                
+                if (isHeritage) {
+                    const randomIcon = cropIcons[i % cropIcons.length];
+                    tile.className = "h-10 rounded-lg bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-center text-emerald-400 transition-all hover:scale-105";
+                    tile.innerHTML = `<i data-lucide="${randomIcon}" class="w-5 h-5"></i>`;
+                } else {
+                    const randomIcon = corporateIcons[i % corporateIcons.length];
+                    tile.className = "h-10 rounded-lg bg-rose-950/60 border border-rose-500/40 flex items-center justify-center text-rose-400 transition-all hover:scale-105";
+                    tile.innerHTML = `<i data-lucide="${randomIcon}" class="w-5 h-5"></i>`;
+                }
+                grid.appendChild(tile);
+            }
+
+            // Update Status Label
+            const label = document.getElementById('farm-status-label');
+            if (gameState.heritageRatio >= 0.7) {
+                label.textContent = "เกษตรนิเวศผสมผสาน";
+                label.className = "text-xs font-semibold text-emerald-400";
+            } else if (gameState.heritageRatio >= 0.35) {
+                label.textContent = "เกษตรกึ่งเคมีบรรษัท";
+                label.className = "text-xs font-semibold text-amber-400";
+            } else {
+                label.textContent = "เกษตรเชิงเดี่ยวผูกขาด";
+                label.className = "text-xs font-semibold text-rose-400";
+            }
+
+            lucide.createIcons();
+        }
+
+        // Load Scenario Data into UI
+        function loadScenario(index) {
+            const sc = scenarios[index];
+            if (!sc) {
+                checkEnding();
+                return;
+            }
+
+            document.getElementById('event-tag').innerHTML = `<i data-lucide="calendar" class="w-3.5 h-3.5"></i> ปีที่ ${sc.year} - ${sc.season}`;
+            document.getElementById('event-year-season').textContent = `เหตุการณ์ที่ ${sc.id} / ${scenarios.length}`;
+            document.getElementById('event-title').textContent = sc.title;
+            document.getElementById('event-subtitle').textContent = sc.subtitle;
+            document.getElementById('event-description').textContent = sc.description;
+            
+            // Icon
+            const iconEl = document.getElementById('event-icon');
+            iconEl.setAttribute('data-lucide', sc.icon || 'sprout');
+
+            // Warning Box
+            const warnBox = document.getElementById('upov-warning-card');
+            if (sc.warning) {
+                document.getElementById('upov-warning-text').textContent = sc.warning;
+                warnBox.classList.remove('hidden');
+                warnBox.classList.add('warning-glow');
+            } else {
+                warnBox.classList.add('hidden');
+                warnBox.classList.remove('warning-glow');
+            }
+
+            // Render Choice Buttons
+            const choicesContainer = document.getElementById('choices-container');
+            choicesContainer.innerHTML = '';
+
+            sc.choices.forEach((ch, cIndex) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left glass-card p-4 rounded-xl border border-slate-700/80 hover:border-emerald-500/60 hover:bg-slate-800/80 transition-all duration-200 group flex items-start justify-between gap-3";
+                
+                btn.onclick = () => selectChoice(ch);
+
+                btn.innerHTML = `
+                    <div class="space-y-1">
+                        <div class="font-bold text-sm md:text-base text-slate-100 group-hover:text-emerald-300 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-emerald-400 text-xs flex items-center justify-center border border-slate-700 group-hover:border-emerald-500/50">${cIndex + 1}</span>
+                            ${ch.title}
+                        </div>
+                        <p class="text-xs text-slate-400 pl-8 thai-serif">${ch.desc}</p>
+                    </div>
+                    <div class="p-2 bg-slate-800 rounded-lg text-slate-400 group-hover:text-emerald-400 group-hover:bg-emerald-500/20 shrink-0">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                `;
+                choicesContainer.appendChild(btn);
+            });
+
+            lucide.createIcons();
+        }
+
+        // Handle Player Choice
+        function selectChoice(choice) {
+            if (choice.sfx) playSfx(choice.sfx);
+
+            // Apply Stat Impacts
+            const imp = choice.impact;
+            if (imp) {
+                if (imp.bio) gameState.biodiversity += imp.bio;
+                if (imp.auto) gameState.autonomy += imp.auto;
+                if (imp.money) gameState.money += imp.money;
+                if (imp.power) gameState.power += imp.power;
+                if (imp.heritageRatio) gameState.heritageRatio = Math.min(1, Math.max(0, gameState.heritageRatio + imp.heritageRatio));
+            }
+
+            // Log History
+            if (choice.log) {
+                addLog(choice.log);
+            }
+
+            // Advance Turn
+            gameState.turn += 1;
+            updateUI();
+
+            if (gameState.turn > scenarios.length) {
+                setTimeout(() => {
+                    checkEnding();
+                }, 500);
+            } else {
+                loadScenario(gameState.turn - 1);
+            }
+        }
+
+        function addLog(text) {
+            const logContainer = document.getElementById('action-log');
+            const p = document.createElement('p');
+            p.className = "flex items-start gap-1.5 text-slate-300 animate-fadeIn";
+            p.innerHTML = `<i data-lucide="check-circle2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i> <span>${text}</span>`;
+            logContainer.prepend(p);
+            lucide.createIcons();
+        }
+
+
+        // --- ENDINGS EVALUATION ENGINE ---
+        function checkEnding() {
+            const { biodiversity, autonomy, power, money } = gameState;
+
+            let endingType = ''; // 'victory', 'dystopia', 'struggle'
+            let title = '';
+            let desc = '';
+            let badgeText = '';
+            let badgeClass = '';
+            let iconName = '';
+            let iconBg = '';
+
+            // Victory: Strong Resistance Power & High Autonomy
+            if (power >= 60 && autonomy >= 60 && biodiversity >= 50) {
+                endingType = 'victory';
+                title = 'ชัยชนะแห่งอธิปไตยเมล็ดพันธุ์ไทย (Seed Sovereignty Victory)';
+                badgeText = 'ฉากจบระดับสมบูรณ์แบบ (Victory Ending)';
+                badgeClass = 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+                iconName = 'trophy';
+                iconBg = 'bg-emerald-500/20 border-emerald-500 text-emerald-400';
+                desc = `พลังตื่นรู้ของประชาชนและเครือข่ายเกษตรกรสร้างปาฏิหาริย์! สภาผู้แทนราษฎรยึดฟังเสียงประชาชน ปฏิเสธการลงนามใน UPOV 1991 และร่วมกันผลักดัน พ.ร.บ. คุ้มครองพันธุ์พืช ฉบับประชาชน ชุมชนของคุณกลายเป็นศูนย์เรียนรู้ธนาคารเมล็ดพันธุ์ระดับประเทศ เกษตรกรมีอิสระในการเก็บ คัดสรร และแลกเปลี่ยนเมล็ดพันธุ์ รักษามรดกทางชีวภาพอันล้ำค่าไว้ให้ลูกหลานไทยได้อย่างยั่งยืน!`;
+                playSfx('victory');
+            } 
+            // Dystopia: Low Autonomy or Extreme Debt
+            else if (autonomy < 40 || money < -10000 || biodiversity < 35) {
+                endingType = 'dystopia';
+                title = 'ฝันร้าย UPOV 1991: ยุคมืดแห่งการผูกขาดเกษตรกรรม';
+                badgeText = 'ฉากจบระดับวิกฤต (Dystopian Ending)';
+                badgeClass = 'bg-rose-500/20 text-rose-300 border border-rose-500/40';
+                iconName = 'skull';
+                iconBg = 'bg-rose-500/20 border-rose-500 text-rose-400';
+                desc = `ร่างกฎหมาย UPOV 1991 ผ่านการอนุมัติสมบูรณ์แบบ... บรรษัทข้ามชาติเข้ายึดครองตลาดเมล็ดพันธุ์ไทยกว่า 95% การเก็บเมล็ดพันธุ์ไว้ปลูกต่อกลายเป็นความผิดทางอาญา มีเกษตรกรถูกจับกุมและถูกปรับมหาศาล เมล็ดพันธุ์พื้นบ้านสูญพันธุ์ไปอย่างถาวร เกษตรกรรายย่อยตกอยู่ในวงจรหนี้สินเรื้อรัง ต้องซื้อเมล็ดพันธุ์และสารเคมีราคาแพงจากบรรษัททุกปี ชุมชนสูญเสียอิสรภาพและอธิปไตยทางอาหารโดยสิ้นเชิง`;
+                playSfx('alert');
+            } 
+            // Struggle / Balanced Ending
+            else {
+                endingType = 'struggle';
+                title = 'การต่อสู้ยืดเยื้อ: ท่ามกลางวงล้อมบรรษัท';
+                badgeText = 'ฉากจบการต่อสู้ยังคงดำเนินต่อไป (Ongoing Struggle)';
+                badgeClass = 'bg-amber-500/20 text-amber-300 border border-amber-500/40';
+                iconName = 'shield-alert';
+                iconBg = 'bg-amber-500/20 border-amber-500 text-amber-400';
+                desc = `แม้รัฐบาลจะลงนามชะลอ UPOV 1991 ออกไปชั่วคราวจากแรงกดดันภาคประชาชน แต่บรรษัทข้ามชาติยังคงพยายามผลักดันกฎหมายผ่านช่องทางสิทธิบัตรอื่นๆ ชุมชนของคุณรักษาเมล็ดพันธุ์พื้นบ้านไว้ได้บางส่วน แต่ยังคงต้องต่อสู้ในระดับนโยบายอย่างยืดเยื้อ อนาคตของเมล็ดพันธุ์ไทยขึ้นอยู่กับความเข้มแข็งของพวกเราในการไม่ยอมจำนน`;
+                playSfx('click');
+            }
+
+            // Populate Modal
+            document.getElementById('ending-title').textContent = title;
+            document.getElementById('ending-description').textContent = desc;
+            
+            const badge = document.getElementById('ending-badge');
+            badge.textContent = badgeText;
+            badge.className = `px-3 py-1 text-xs rounded-full font-bold uppercase tracking-wider ${badgeClass}`;
+
+            const iconContainer = document.getElementById('ending-icon-container');
+            iconContainer.className = `w-20 h-20 mx-auto rounded-full flex items-center justify-center border ${iconBg}`;
+            
+            const icon = document.getElementById('ending-icon');
+            icon.setAttribute('data-lucide', iconName);
+
+            // Final Stats
+            document.getElementById('end-stat-bio').textContent = `${Math.round(biodiversity)}%`;
+            document.getElementById('end-stat-auto').textContent = `${Math.round(autonomy)}%`;
+            document.getElementById('end-stat-money').textContent = `฿${new Intl.NumberFormat('th-TH').format(money)}`;
+            document.getElementById('end-stat-power').textContent = `${Math.round(power)}%`;
+
+            lucide.createIcons();
+            openModal('ending-modal');
+        }
+
+        function restartGame() {
+            closeModal('ending-modal');
+            initGame();
+        }
+
+        // --- COPY LINK & CAPTION HELPERS ---
+        function copyGameLink() {
+            const input = document.getElementById('share-link-input');
+            input.select();
+            input.setSelectionRange(0, 99999);
+            try {
+                document.execCommand('copy');
+                const fb = document.getElementById('copy-feedback');
+                fb.classList.remove('hidden');
+                setTimeout(() => fb.classList.add('hidden'), 3000);
+            } catch (err) {
+                console.error('Failed to copy', err);
+            }
+        }
+
+        function copyCaption() {
+            const captionArea = document.getElementById('share-caption');
+            captionArea.select();
+            captionArea.setSelectionRange(0, 99999);
+            try {
+                document.execCommand('copy');
+                alert('คัดลอกแคปชันสำเร็จ! สามารถนำไปโพสต์ลง Facebook หรือ Instagram ได้เลย');
+            } catch (err) {
+                console.error('Failed to copy caption', err);
+            }
+        }
+
+        // --- SIMPLE PROCEDURAL QR CODE GENERATOR ON CANVAS ---
+        function generateQRCode(text) {
+            const canvas = document.getElementById('qr-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const size = 110;
+            const modules = 21; // standard QR version 1 size
+            const modSize = size / modules;
+
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, size, size);
+
+            // Deterministic pseudo-random pattern based on text length/hash
+            let hash = 0;
+            for (let i = 0; i < text.length; i++) {
+                hash = ((hash << 5) - hash) + text.charCodeAt(i);
+                hash |= 0;
+            }
+
+            ctx.fillStyle = '#0f172a';
+            for (let r = 0; r < modules; r++) {
+                for (let c = 0; c < modules; c++) {
+                    // Draw finder patterns in 3 corners
+                    const isFinder = (r <= 6 && c <= 6) || (r <= 6 && c >= modules - 7) || (r >= modules - 7 && c <= 6);
+                    if (isFinder) {
+                        const isBorder = (r === 0 || r === 6 || c === 0 || c === 6 || (r >= 2 && r <= 4 && c >= 2 && c <= 4));
+                        if (isBorder || (r >= 2 && r <= 4 && c >= 2 && c <= 4)) {
+                            // simplified finder box
+                            if (r === 0 || r === 6 || c === 0 || c === 6 || (r >= 2 && r <= 4 && c >= 2 && c <= 4)) {
+                                // check inside finder
+                                const innerBox = (r >= 2 && r <= 4 && c >= 2 && c <= 4);
+                                if (!innerBox || (r === 3 && c === 3)) {
+                                    ctx.fillRect(c * modSize, r * modSize, modSize + 0.5, modSize + 0.5);
+                                }
+                            }
+                        }
+                    } else {
+                        // Data modules
+                        const pseudoRand = Math.sin(hash + r * 12.9898 + c * 78.233) * 43758.5453;
+                        if ((pseudoRand - Math.floor(pseudoRand)) > 0.48) {
+                            ctx.fillRect(c * modSize, r * modSize, modSize + 0.5, modSize + 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // --- MODAL CONTROLS ---
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            playSfx('click');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            playSfx('click');
+        }
+
+        // Window Load Initialization
+        window.onload = function() {
+            lucide.createIcons();
+            initGame();
+        };
+    </script>
+</body>
+</html>
+```
+eof
+```
