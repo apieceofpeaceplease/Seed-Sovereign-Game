@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แผ่นดินนี้ เมล็ดพันธุ์นี้ ใครครอง? — วิกฤต UPOV 1991</title>
+    <title>Seed Sovereign: วิกฤต UPOV 1991 — แผ่นดินนี้ เมล็ดพันธุ์นี้ ใครครอง?</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Prompt:wght@300;400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f2f5f2;
+            --bg-color: #f3f6f3;
             --card-bg: #ffffff;
-            --primary-green: #2d5a27;
-            --accent-green: #4a7c59;
-            --light-green: #e8f0e8;
-            --text-main: #2b3a2b;
-            --text-muted: #5a6b5a;
-            --border-color: #d2e0d2;
-            --danger-color: #b93838;
+            --primary-green: #234d20;
+            --accent-green: #3b7a57;
+            --light-green: #eaf2ea;
+            --text-main: #223022;
+            --text-muted: #536453;
+            --border-color: #cce0cc;
+            --danger-color: #a83232;
             --warning-color: #d97706;
+            --shadow-sm: 0 4px 12px rgba(35, 77, 32, 0.06);
+            --shadow-md: 0 10px 25px rgba(35, 77, 32, 0.1);
         }
 
         * {
@@ -26,6 +29,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Sarabun', sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -40,30 +44,65 @@
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
             background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(45, 90, 39, 0.08);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
-            padding: 20px;
+            padding: 22px 18px;
             overflow: hidden;
+            position: relative;
         }
 
-        .art-container {
+        /* Logo Branding Header */
+        .brand-header {
             text-align: center;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
-        .art-container svg {
-            width: 70px;
-            height: 70px;
-            stroke: var(--primary-green);
-            fill: none;
-            stroke-width: 1.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+        .brand-logo-svg {
+            width: 170px;
+            height: auto;
+            display: inline-block;
         }
 
+        /* Basil Graphic Line Art Section */
+        .basil-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 12px;
+            margin-bottom: 16px;
+            background: var(--light-green);
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .basil-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .basil-item svg {
+            width: 42px;
+            height: 52px;
+            transition: transform 0.3s ease;
+        }
+
+        .basil-item:hover svg {
+            transform: scale(1.1);
+        }
+
+        .basil-label {
+            font-size: 0.68rem;
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* Typography */
         h1 {
             font-family: 'Prompt', sans-serif;
             font-size: 1.35rem;
@@ -75,38 +114,41 @@
         }
 
         .subtitle {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             font-weight: 300;
         }
 
         .poem-box {
-            background-color: var(--light-green);
+            background-color: #f7faf7;
             border-left: 3px solid var(--accent-green);
             padding: 14px 16px;
             border-radius: 0 12px 12px 0;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             text-align: center;
+            box-shadow: var(--shadow-sm);
         }
 
         .poem {
             font-family: 'Charm', cursive;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--primary-green);
             line-height: 1.7;
         }
 
+        /* Status Metrics */
         .status-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            margin-bottom: 16px;
-            background: #fafcfb;
-            padding: 10px;
-            border-radius: 12px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
 
         .status-item {
@@ -114,9 +156,9 @@
         }
 
         .status-label {
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             color: var(--text-muted);
-            margin-bottom: 2px;
+            margin-bottom: 3px;
             display: block;
             font-weight: 600;
         }
@@ -129,7 +171,7 @@
 
         .progress-bar {
             height: 5px;
-            background-color: #e0e0e0;
+            background-color: #e2e8e2;
             border-radius: 3px;
             overflow: hidden;
             margin-top: 4px;
@@ -139,31 +181,46 @@
             height: 100%;
             background-color: var(--accent-green);
             width: 50%;
-            transition: width 0.3s ease;
+            transition: width 0.4s ease;
         }
 
-        .story-box {
+        /* Story Event Cards */
+        .story-card {
             background: #ffffff;
-            border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 16px;
-            border: 1px solid #eef3ee;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 18px;
+            border: 1px solid #e2ebe2;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .scene-badge {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--primary-green);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
         }
 
         .scene-title {
             font-family: 'Prompt', sans-serif;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: var(--primary-green);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
 
         .story-text {
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.88rem;
+            line-height: 1.65;
             color: var(--text-main);
         }
 
+        /* Decision Choice Buttons */
         .choices-container {
             display: flex;
             flex-direction: column;
@@ -172,61 +229,181 @@
 
         .btn {
             width: 100%;
-            padding: 12px 14px;
+            padding: 13px 15px;
             background-color: #ffffff;
             border: 1.5px solid var(--accent-green);
             color: var(--primary-green);
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 0.88rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
             text-align: left;
-            line-height: 1.4;
+            line-height: 1.45;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
-        .btn:active, .btn:hover {
+        .btn:active {
+            transform: scale(0.98);
             background-color: var(--primary-green);
             color: #ffffff;
             border-color: var(--primary-green);
         }
 
-        .btn-start {
+        .btn-primary {
             background-color: var(--primary-green);
             color: #ffffff;
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.98rem;
             padding: 14px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(35, 77, 32, 0.2);
         }
 
-        .credits {
-            margin-top: 20px;
+        .btn-primary:hover, .btn-primary:active {
+            background-color: var(--accent-green);
+        }
+
+        .btn-advocacy {
+            background-color: var(--warning-color);
+            color: #ffffff;
+            border: none;
             text-align: center;
+            font-size: 0.9rem;
+            padding: 13px;
+            text-decoration: none;
+            display: block;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        /* Resource Center Grid */
+        .resource-section {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .resource-title {
+            font-family: 'Prompt', sans-serif;
+            font-size: 0.9rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .resource-card {
+            background: var(--light-green);
+            padding: 10px;
+            border-radius: 10px;
             font-size: 0.75rem;
+            text-decoration: none;
+            color: var(--primary-green);
+            font-weight: 600;
+            display: block;
+            border: 1px solid var(--border-color);
+            transition: background 0.2s ease;
+        }
+
+        .resource-card:hover {
+            background: #d8ead8;
+        }
+
+        .resource-card span {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        .footer-brand {
+            margin-top: 22px;
+            text-align: center;
+            font-size: 0.72rem;
             color: var(--text-muted);
         }
 
         @media (max-width: 380px) {
             h1 { font-size: 1.2rem; }
             .poem { font-size: 1rem; }
-            .container { padding: 14px; }
+            .container { padding: 16px 12px; }
+            .resource-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="art-container">
-        <svg viewBox="0 0 24 24">
-            <path d="M12 22V12M12 12C12 7 7 4 2 5C2 10 5 14 12 12ZM12 12C12 7 17 4 22 5C22 10 19 14 12 12Z" />
-            <circle cx="12" cy="18" r="1" fill="var(--primary-green)" />
+    <!-- SVG Brand Logo -->
+    <div class="brand-header">
+        <svg class="brand-logo-svg" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="#234d20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 25 35 C 18 20, 45 15, 40 35 C 36 50, 20 40, 28 25" />
+                <path d="M 50 35 L 50 20 C 50 15, 60 15, 60 25 L 60 35" />
+                <path d="M 70 25 C 65 20, 80 15, 80 25 C 80 35, 65 35, 75 35" />
+                <path d="M 90 28 C 85 20, 105 20, 100 28 C 95 38, 85 30, 102 35" />
+                <path d="M 110 30 C 110 20, 125 25, 120 35" />
+                <path d="M 140 25 C 135 15, 155 15, 150 25 C 145 35, 135 30, 152 35" />
+
+                <path d="M 30 70 C 20 60, 45 55, 38 70 C 33 80, 25 75, 42 75" />
+                <path d="M 50 65 L 50 78 M 45 70 L 58 70" />
+                <path d="M 70 65 C 60 55, 85 55, 78 68 C 73 78, 65 72, 82 76" />
+                <path d="M 92 68 C 87 60, 107 60, 102 68 C 97 78, 87 72, 104 76" />
+                <path d="M 112 70 C 107 60, 127 60, 122 70 C 117 80, 107 74, 124 78" />
+
+                <path d="M 30 108 L 30 90 C 30 85, 42 85, 42 95 C 42 105, 30 100, 45 108" />
+                <path d="M 52 88 L 52 108" />
+                <path d="M 62 100 C 57 90, 77 90, 72 100 C 67 110, 57 104, 74 108" />
+                <path d="M 84 100 C 79 90, 99 90, 94 100 C 89 110, 79 104, 96 108" />
+
+                <path d="M 110 98 C 105 90, 122 90, 118 98 C 113 108, 105 102, 120 105" />
+                <path d="M 128 100 C 123 90, 143 90, 138 100 C 133 110, 123 104, 140 108" />
+                <path d="M 148 108 L 153 115" />
+            </g>
         </svg>
     </div>
 
     <h1>แผ่นดินนี้ เมล็ดพันธุ์นี้ ใครครอง?</h1>
-    <div class="subtitle">วิกฤต UPOV 1991 และทางรอดของเกษตรกรไทย</div>
+    <div class="subtitle">Seed Sovereign: วิกฤต UPOV 1991 และทางรอดของเกษตรกร</div>
 
     <div id="game-content">
+        <!-- Minimalist Line Art Basil Strains -->
+        <div class="basil-showcase">
+            <div class="basil-item">
+                <svg viewBox="0 0 100 120">
+                    <path d="M 50 110 Q 50 60 50 10 M 50 80 C 20 70 10 40 50 50 M 50 60 C 80 50 90 20 50 30" fill="none" stroke="#234d20" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="basil-label">กะเพราป่า</span>
+            </div>
+            <div class="basil-item">
+                <svg viewBox="0 0 100 120">
+                    <path d="M 50 110 Q 50 60 50 10 M 50 75 C 10 60 10 30 50 45 M 50 55 C 90 40 90 10 50 25" fill="none" stroke="#8b263e" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="basil-label">กะเพราแดง</span>
+            </div>
+            <div class="basil-item">
+                <svg viewBox="0 0 100 120">
+                    <path d="M 50 110 Q 50 60 50 10 M 50 85 C 25 80 20 55 50 60 M 50 65 C 75 60 80 35 50 40" fill="none" stroke="#3b7a57" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="basil-label">กะเพราขาว</span>
+            </div>
+            <div class="basil-item">
+                <svg viewBox="0 0 100 120">
+                    <path d="M 50 110 Q 50 60 50 10 M 50 70 C 15 50 30 20 50 35 M 50 50 C 85 30 70 0 50 15" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="basil-label">สายพันธุ์ผสม</span>
+            </div>
+        </div>
+
         <div class="poem-box">
             <div class="poem">
                 "เก็บเมล็ด ปลูกต่อ คือวิถี<br>
@@ -236,18 +413,20 @@
             </div>
         </div>
 
-        <div class="story-box">
+        <div class="story-card">
             <div class="story-text">
-                คุณคือเกษตรกรรายย่อยในชนบทไทย ที่ต้องเผชิญกับคลื่นลมแห่งความเปลี่ยนแปลง เมื่อกฎหมายคุ้มครองพันธุ์พืชฉบับใหม่ (UPOV 1991) และการสืบสายพันธุ์ดัดแปลง (EDV) เข้ามาเปลี่ยนสิทธิในการเก็บเมล็ดพันธุ์ของคุณตลอดไป...
+                คุณคือเกษตรกรรายย่อยที่ต้องเผชิญกับคลื่นลมแห่งความเปลี่ยนแปลง เมื่ออนุสัญญาคุ้มครองพันธุ์พืชฉบับใหม่ (UPOV 1991) และการผูกขาดห่วงโซ่อุปทานเกษตร เข้ามาเปลี่ยนสิทธิการเก็บเมล็ดพันธุ์ของคุณตลอดไป...
             </div>
         </div>
 
         <div class="choices-container">
-            <button class="btn btn-start" onclick="startGame()">เริ่มบทเรียนจำลองสถานการณ์</button>
+            <button class="btn btn-primary" onclick="startGame()">เริ่มจำลองสถานการณ์</button>
         </div>
     </div>
 
-    <div class="credits">by a piece of peace, please</div>
+    <div class="footer-brand">
+        a piece of peace, please — Educational Advocacy Game Project
+    </div>
 </div>
 
 <script>
@@ -260,49 +439,86 @@
 
     const scenes = [
         {
-            title: "ฉากที่ 1: การคัดเลือกเมล็ดพันธุ์ต้นฤดูกาล",
-            text: "ฤดูกาลเพาะปลูกใหม่มาถึง บริษัทยักษ์ใหญ่ด้านการเกษตรส่งเซลล์เข้ามาในหมู่บ้าน พร้อมเสนอขาย 'เมล็ดพันธุ์กะเพราอุตสาหกรรมสายพันธุ์ใหม่' ที่ให้ใบใหญ่ กลิ่นหอม และโตไว แต่มีเงื่อนไขในสัญญาห้ามเก็บเมล็ดไว้ปลูกต่อในฤดูถัดไป",
+            badge: "สถานการณ์ที่ 1",
+            title: "จุดเริ่มต้นฤดูกาล: เมล็ดพันธุ์ข้าว & พืชเศรษฐกิจ",
+            text: "ฤดูกาลเพาะปลูกใหม่มาถึง บริษัทยักษ์ใหญ่เกษตรเสนอขาย 'เมล็ดพันธุ์ข้าวและผักลูกผสม F1' สัญญาผูกขาดการันตีผลผลิตสูง แต่มีเงื่อนไขห้ามเก็บเมล็ดไว้ปลูกต่อเด็ดขาด ในขณะที่คุณมี 'พันธุ์ข้าวสังข์หยด/หอมนิล' และเมล็ดพันธุ์พื้นบ้านเดิมที่เก็บไว้",
             choices: [
                 {
-                    text: "🌾 ใช้ 'กะเพราพื้นบ้าน' เดิม (คัดสรรเองตามวิถีเดิม ทนโรค ผลผลิตปานกลาง เก็บเมล็ดได้)",
+                    text: "🌾 ใช้ 'เมล็ดพันธุ์พื้นบ้าน' เดิม (คัดสรรเองตามวิถี ทนโรค เก็บเมล็ดปลูกต่อได้ ไม่เป็นหนี้)",
                     effect: { bio: 10, autonomy: 10, wealth: -5 },
                     next: 1
                 },
                 {
-                    text: "📦 ซื้อ 'กะเพราอุตสาหกรรม' ของบริษัท (ผลผลิตสูง ตลาดรับซื้อแน่นอน แต่ห้ามเก็บเมล็ดต่อ)",
-                    effect: { bio: -15, autonomy: -15, wealth: 15 },
+                    text: "📦 ซื้อ 'เมล็ดพันธุ์ลูกผสมกลุ่มทุน' (ผลผลิตสูง ตลาดรับซื้อแน่นอน แต่ห้ามเก็บเมล็ดต่อ ต้องซื้อใหม่ทุกปี)",
+                    effect: { bio: -15, autonomy: -15, wealth: 10 },
                     next: 1
                 }
             ]
         },
         {
-            title: "ฉากที่ 2: วิกฤตสิทธิ EDV (สายพันธุ์อนุพันธ์)",
-            text: "คุณคัดเลือกกะเพราพื้นบ้านจนได้สายพันธุ์ที่มีใบดกและทนแล้งเป็นพิเศษ แต่ต่อมา ประเทศไทยยอมรับอนุสัญญา UPOV 1991 บริษัทใหญ่ตรวจพบว่ากะเพราของคุณมีลักษณะพันธุกรรมใกล้เคียงกับกะเพราจดสิทธิบัตรของเขา และอ้างว่าเป็น 'สายพันธุ์อนุพันธ์ (EDV)' พร้อมส่งหนังสือเตือนให้หยุดขายหรือจ่ายค่าลิขสิทธิ์",
+            badge: "สถานการณ์ที่ 2",
+            title: "ข้ออ้างกลุ่มทุน: 'ธุรกิจแนวตั้ง' และ 'กะเพรา 200 สายพันธุ์'",
+            text: "นักวิจัยกลุ่มทุนออกสื่อระบุว่า 'เราจดสิทธิบัตรกะเพราอุตสาหกรรมแค่ 4 สายพันธุ์ กะเพรามีตั้ง 200 สายพันธุ์ ชาวบ้านก็ใช้สายพันธุ์อื่นไปสิ!' พร้อมย้ำว่าการคุมต้นน้ำถึงปลายน้ำคือ 'ธุรกิจแนวตั้ง ไม่ใช่การกินรวบ'",
             choices: [
                 {
-                    text: "⚖️ ต่อสู้และรวมกลุ่มกับเครือข่ายเกษตรกร เพื่อคัดค้านกฎหมายผูกขาดพันธุ์พืช",
-                    effect: { bio: 10, autonomy: 15, wealth: -10 },
+                    text: "🗣️ โต้แย้ง: ธุรกิจแนวตั้งคุมช่องทางตลาด บีบให้ร้านค้าและสัญญาคอนแทรคฟาร์มมิ่งรับเฉพาะ 4 สายพันธุ์นี้ เท่ากับลบอีก 196 สายพันธุ์ออกจากตลาดโดยปริยาย!",
+                    effect: { bio: 10, autonomy: 15, wealth: -5 },
                     next: 2
                 },
                 {
-                    text: "📝 ยอมจำนน ยอมจ่ายค่าธรรมเนียมลิขสิทธิ์ให้บริษัทเพื่อตัดปัญหาดำเนินคดี",
-                    effect: { bio: -10, autonomy: -20, wealth: -15 },
+                    text: "🤝 ยอมรับเงื่อนไข: หันไปปลูกเฉพาะกะเพรา 4 สายพันธุ์ตามสัญญากลุ่มทุน เพื่อความชัวร์ในการส่งขายร้านสะดวกซื้อ",
+                    effect: { bio: -20, autonomy: -20, wealth: 15 },
                     next: 2
                 }
             ]
         },
         {
-            title: "ฉากที่ 3: บทสรุป 4 สายพันธุ์กะเพรา และอธิปไตยทางอาหาร",
-            text: "กลุ่มทุนรวบหัวรวบท้ายครอบครอง 'กะเพรา 4 สายพันธุ์หลัก' ในท้องตลาดได้ทั้งหมด เกษตรกรที่ไม่ยอมสยบถูกฟ้องร้อง ข้อหาแอบเก็บเมล็ดพันธุ์ปลูกต่อ ตลาดท้องถิ่นเริ่มหาเมล็ดพันธุ์พื้นบ้านยากขึ้น ทุกอย่างตกอยู่ในมือของนายทุน",
+            badge: "สถานการณ์ที่ 3",
+            title: "กับดัก EDV (สายพันธุ์อนุพันธ์) ใน UPOV 1991",
+            text: "คุณใช้เวลาหลายปีคัดสรรกะเพราพื้นบ้านจนทนแล้งสำเร็จ แต่เมื่อไทยพิจารณารับ UPOV 1991 บริษัทใหญ่ตรวจพบว่ากะเพราของคุณมีพันธุกรรมใกล้เคียงกับสายพันธุ์จดสิทธิบัตรของเขา จึงใช้อำนาจกฎหมาย EDV อ้างว่ากะเพราของคุณเป็น 'สายพันธุ์อนุพันธ์' และสั่งยึดผลผลิต!",
             choices: [
                 {
-                    text: "🌱 ร่วมจัดตั้ง 'ธนาคารเมล็ดพันธุ์ชุมชน' อนุรักษ์สายพันธุ์ท้องถิ่น และรณรงค์ให้สังคมตระหนักรู้ UPOV 1991",
-                    effect: { bio: 20, autonomy: 20, wealth: 5 },
+                    text: "⚖️ ไม่ยินยอม! รวมกลุ่มเกษตรกรและนักวิชาการ ยื่นฟ้องต่อสู้ว่านี่คือ Biopiracy (โจรสลัดชีวภาพ) ยึดสายพันธุ์บรรพบุรุษ",
+                    effect: { bio: 15, autonomy: 15, wealth: -15 },
+                    next: 3
+                },
+                {
+                    text: "📝 ยอมจ่ายค่าลิขสิทธิ์ EDV ให้บริษัท เพื่อตัดปัญหาการโดนฟ้องร้องดำเนินคดี",
+                    effect: { bio: -10, autonomy: -25, wealth: -15 },
+                    next: 3
+                }
+            ]
+        },
+        {
+            badge: "สถานการณ์ที่ 4",
+            title: "มาตรการห้ามเก็บเมล็ดพันธุ์ปลูกต่อ (Seed-Saving Ban)",
+            text: "กฎหมาย UPOV 1991 มีบทลงโทษรุนแรง เกษตรกรที่คัดเก็บเมล็ดพันธุ์พืชจดสิทธิบัตรไว้ปลูกต่อในฤดูถัดไป มีความผิดอาญา โดนริบผลผลิตและปรับเงินก้อนโต เกษตรกรเพื่อนบ้านหลายรายเริ่มกลัวจนต้องทิ้งเมล็ดพันธุ์ท้องถิ่น",
+            choices: [
+                {
+                    text: "🧺 ร่วมจัดตั้ง 'ธนาคารเมล็ดพันธุ์ชุมชน' (Community Seed Bank) กระจายเก็บแลกเปลี่ยนเมล็ดพันธุ์แบบใต้ดิน",
+                    effect: { bio: 20, autonomy: 15, wealth: -5 },
+                    next: 4
+                },
+                {
+                    text: "🚜 เลิกเก็บเมล็ดพันธุ์อย่างสิ้นเชิง ยอมซื้อเมล็ดพันธุ์และปุ๋ยเคมีบรรจุซองจากบริษัททุกฤดูกาล",
+                    effect: { bio: -20, autonomy: -30, wealth: -10 },
+                    next: 4
+                }
+            ]
+        },
+        {
+            badge: "สถานการณ์ที่ 5",
+            title: "ศึกทางรอด: อธิปไตยทางอาหาร vs กฎหมายการค้าเสรี",
+            text: "ภาครัฐเตรียมลงนามข้อตกลงการค้าเสรี (FTA) ที่บังคับให้ไทยเข้าเป็นสมาชิก UPOV 1991 เพื่อแลกกับการส่งออกสินค้าอุตสาหกรรม กลุ่มทุนใหญ่หนุนหลังเต็มที่ แต่เกษตรกรรายย่อยกำลังจะสูญเสียสิทธิบนผืนดินของตัวเอง",
+            choices: [
+                {
+                    text: "📢 เข้าร่วมเครือข่ายภาคประชาชน รณรงค์สร้างความตื่นรู้ให้ผู้บริโภคคนเมือง และยื่นข้อเสนอคัดค้าน UPOV 1991",
+                    effect: { bio: 15, autonomy: 20, wealth: 5 },
                     next: 'end'
                 },
                 {
-                    text: "🏭 เลิกทำเกษตรกรรม เลิกเก็บเมล็ด หันไปรับจ้างแรงงานหรือรับสัญญาคอนแทรคฟาร์มมิ่งเต็มตัว",
-                    effect: { bio: -25, autonomy: -30, wealth: -10 },
+                    text: "🏳️ ถอนตัวจากการทำเกษตร ขายที่ดินให้กลุ่มทุน แล้วหันไปเป็นแรงงานในเมือง",
+                    effect: { bio: -25, autonomy: -35, wealth: -10 },
                     next: 'end'
                 }
             ]
@@ -326,12 +542,12 @@
                     <div class="progress-bar"><div class="progress-fill" style="width: ${Math.max(0, Math.min(100, state.bio))}%"></div></div>
                 </div>
                 <div class="status-item">
-                    <span class="status-label">อิสรภาพ</span>
+                    <span class="status-label">อิสรภาพ/สิทธิ</span>
                     <div class="status-value">${state.autonomy}%</div>
                     <div class="progress-bar"><div class="progress-fill" style="width: ${Math.max(0, Math.min(100, state.autonomy))}%"></div></div>
                 </div>
                 <div class="status-item">
-                    <span class="status-label">ทุน/หนี้สิน</span>
+                    <span class="status-label">ทุน/ความยั่งยืน</span>
                     <div class="status-value">${state.wealth}%</div>
                     <div class="progress-bar"><div class="progress-fill" style="width: ${Math.max(0, Math.min(100, state.wealth))}%"></div></div>
                 </div>
@@ -349,7 +565,8 @@
         let html = renderStatus();
 
         html += `
-            <div class="story-box">
+            <div class="story-card">
+                <span class="scene-badge">${scene.badge}</span>
                 <div class="scene-title">${scene.title}</div>
                 <div class="story-text">${scene.text}</div>
             </div>
@@ -381,25 +598,60 @@
         let endingTitle = "";
         let endingDesc = "";
 
-        if (state.autonomy >= 60 && state.bio >= 60) {
-            endingTitle = "🏆 ฉากจบ: ชัยชนะของอธิปไตยทางอาหาร";
-            endingDesc = "คุณและชุมชนร่วมกันปกป้องเมล็ดพันธุ์พื้นบ้านไว้ได้ สร้างธนาคารเมล็ดพันธุ์ที่เข้มแข็ง หยุดยั้งการครอบงำของ UPOV 1991 และคืนความอุดมสมบูรณ์ให้แก่แผ่นดิน!";
-        } else if (state.autonomy <= 30) {
-            endingTitle = "⚠️ ฉากจบ: ทาสพันธสัญญาและสิทธิบัตร";
-            endingDesc = "คุณสูญเสียอิสรภาพในการเก็บเมล็ดพันธุ์โดยสิ้นเชิง ต้องซื้อเมล็ดและปุ๋ยจากบริษัทกลุ่มทุนทุกปี ตกอยู่ในวงจรอภิมหาผูกขาดที่ไม่สามารถถอนตัวได้";
+        if (state.autonomy >= 65 && state.bio >= 60) {
+            endingTitle = "🏆 ชัยชนะแห่งอธิปไตยทางเมล็ดพันธุ์ (Seed Sovereignty)";
+            endingDesc = "คุณและเครือข่ายเกษตรกรสามารถปกป้องเมล็ดพันธุ์พื้นบ้านไว้ได้สำเร็จ สร้างธนาคารเมล็ดพันธุ์ชุมชนที่เข้มแข็ง หยุดยั้งการเข้าร่วม UPOV 1991 และทำให้สังคมตื่นรู้ว่า 'เมล็ดพันธุ์คือมรดกของมนุษยชาติ ไม่ใช่สินค้าผูกขาดของกลุ่มทุน!'";
+        } else if (state.autonomy <= 35) {
+            endingTitle = "⚠️ ตกเป็นทาสพันธสัญญาและสิทธิบัตรผูกขาด";
+            endingDesc = "เกษตรกรสูญเสียสิทธิในการเก็บเมล็ดพันธุ์โดยสิ้นเชิง ต้องซื้อเมล็ดพันธุ์ ปุ๋ย และเคมีจากบริษัทใหญ่ซ้ำแล้วซ้ำเล่าทุกปี ตกอยู่ในวงจรอภิมหาผูกขาด 'ธุรกิจแนวตั้ง' ที่ไม่สามารถถอนตัวได้";
         } else {
-            endingTitle = "⚖️ ฉากจบ: การต่อสู้ที่ยังไม่สิ้นสุด";
-            endingDesc = "แม้ผืนดินจะยังพอมีเมล็ดพันธุ์ท้องถิ่นเหลืออยู่ แต่แรงกดดันจากกฎหมาย UPOV 1991 และกลุ่มทุนใหญ่ยังคงคุกคามสิทธิเกษตรกรอย่างต่อเนื่อง...";
+            endingTitle = "⚖️ การต่อสู้ทางนโยบายที่ยังไม่สิ้นสุด";
+            endingDesc = "แม้ผืนดินจะยังพอมีเมล็ดพันธุ์ท้องถิ่นเหลืออยู่ แต่แรงกดดันจากข้อตกลงการค้าเสรีและกฎหมาย UPOV 1991 ยังคงคุกคามสิทธิเกษตรกรอย่างต่อเนื่อง ความหวังขึ้นอยู่กับการรวมตัวส่งเสียงของประชาชน";
         }
 
         let html = renderStatus();
         html += `
-            <div class="story-box">
+            <div class="story-card">
                 <div class="scene-title">${endingTitle}</div>
                 <div class="story-text">${endingDesc}</div>
             </div>
-            <div class="choices-container">
-                <button class="btn btn-start" onclick="startGame()">🔄 เล่นใหม่อีกครั้ง</button>
+
+            <a href="https://www.biothai.net" target="_blank" class="btn-advocacy">
+                📢 ร่วมส่งเสียงคัดค้าน UPOV 1991 (ยื่นข้อเสนอต่อรัฐบาล)
+            </a>
+
+            <div class="resource-section">
+                <div class="resource-title">🌱 เครือข่าย & แหล่งเรียนรู้เพื่ออธิปไตยทางอาหาร</div>
+                <div class="resource-grid">
+                    <a href="https://www.biothai.net" target="_blank" class="resource-card">
+                        มูลนิธิชีววิถี (BIOTHAI)
+                        <span>วิจัย & ขับเคลื่อนนโยบายเมล็ดพันธุ์</span>
+                    </a>
+                    <a href="https://www.echocommunity.org/th/sections/asia-impact-center" target="_blank" class="resource-card">
+                        ECHO Asia
+                        <span>ธนาคารเมล็ดพันธุ์ & การเกษตรยั่งยืน</span>
+                    </a>
+                    <a href="https://www.punpunthailand.org" target="_blank" class="resource-card">
+                        พันพรรณ (โจน จันได)
+                        <span>ศูนย์อนุรักษ์เมล็ดพันธุ์พื้นบ้าน</span>
+                    </a>
+                    <a href="https://viacampesina.org" target="_blank" class="resource-card">
+                        La Via Campesina
+                        <span>ขบวนการเกษตรกรรายย่อยระดับโลก</span>
+                    </a>
+                    <a href="https://www.grain.org" target="_blank" class="resource-card">
+                        GRAIN Org
+                        <span>ข้อมูลคัดค้านการผูกขาด & UPOV</span>
+                    </a>
+                    <a href="https://www.sathai.org" target="_blank" class="resource-card">
+                        เกษตรกรรมยั่งยืน
+                        <span>เครือข่ายเกษตรกรทางเลือก</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="choices-container" style="margin-top: 16px;">
+                <button class="btn btn-primary" onclick="startGame()">🔄 เล่นใหม่อีกครั้ง</button>
             </div>
         `;
         document.getElementById('game-content').innerHTML = html;
